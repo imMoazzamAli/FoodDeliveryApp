@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.practicalwork2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".SignInActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".DrawerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".CardViewActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".RecyclerViewTest"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".CompaniesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCustom" />
+
+        <activity
+            android:name=".ExpandMenuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".OrderHistoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCustom" />
+
+        <activity
+            android:name=".OrderHistoryMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCustom" />
+
+        <activity
+            android:name=".ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCustom" />
+
+        <activity
+            android:name=".CartOrderActivity"
+            android:hardwareAccelerated="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeCustom"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ExpandAbleActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".StickyHeaderActivity"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".StickyWorkingActivity"></activity>
+
+        <activity
+            android:name=".ExtraActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

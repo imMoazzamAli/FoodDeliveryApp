@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartOrderActivity">
+
+    <TextView
+        android:id="@+id/tvEmptyCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/myriad_set_pro_semibold"
+        android:gravity="center"
+        android:text="Cart is Empty..."
+        android:textColor="@color/colorBlack"
+        android:textSize="20pt"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:id="@+id/rlAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/img_background_menu_main">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="Hi, "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/tv1"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="ZS Square"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="9pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/tv2"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text=". Your order for today is."
+                    android:textColor="@color/colorBlack"
+                    android:textSize="9pt" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/myriad_set_pro_semibold"
+                android:text="24 Wall Street"
+                android:textColor="@color/colorBlack"
+                android:textSize="11pt" />
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv3"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/myriad_set_pro_semibold"
+                android:text="Estimated Delivery Time: "
+                android:textColor="@color/colorBlack"
+                android:textSize="9pt" />
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv3"
+                android:layout_toEndOf="@id/tv4"
+                android:fontFamily="@font/myriad_set_pro_semibold"
+                android:text="20 minutes "
+                android:textColor="@color/colorBlack"
+                android:textSize="9pt" />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/tv4"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/dotted_line" />
+
+            <ListView
+                android:id="@+id/lvCartOrder"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@id/view1"
+                android:dividerHeight="-1dp"></ListView>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/lvCartOrder"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/dotted_line" />
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view2">
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Subtotal" />
+
+                <TextView
+                    android:id="@+id/tv7"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/view2"
+                    android:layout_marginEnd="15dp"
+                    android:text="$ 1000" />
+
+                <TextView
+                    android:id="@+id/tv8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv6"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Sales Tax" />
+
+                <TextView
+                    android:id="@+id/tv9"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/tv7"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="$ 0" />
+
+                <TextView
+
+                    android:id="@+id/tv10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv8"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Delivery Fee" />
+
+                <TextView
+                    android:id="@+id/tv11"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/tv9"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="TBC" />
+
+                <TextView
+
+                    android:id="@+id/tv12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv10"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Discount" />
+
+                <TextView
+                    android:id="@+id/tv13"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/tv11"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="$ 0" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_below="@id/tv12"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/dotted_line" />
+
+                <TextView
+
+                    android:id="@+id/tv14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view3"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="Total: "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:id="@+id/tv15"
+                    android:layout_width="63dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/view3"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="$ 1000"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10pt" />
+
+            </RelativeLayout>
+
+            <!--
+
+                        <RelativeLayout
+                            android:id="@+id/rl3"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_below="@id/tv14"
+                            android:background="@drawable/img_background_menu_main">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="20dp"
+                                android:fontFamily="@font/myriad_set_pro_semibold"
+                                android:text="promo code"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="10pt" />
+
+                            <TextView
+                                android:id="@+id/plusStarterNoodle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="30dp"
+                                android:fontFamily="@font/myriad"
+                                android:text="-"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="12pt"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/lvCartOrder"
+                            android:layout_marginTop="10dp">
+
+
+                            <EditText
+                                android:id="@+id/etEnterCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_toStartOf="@id/btnSave"
+                                android:background="@drawable/rounded_edit_text"
+                                android:hint="Enter Code"
+                                android:imeOptions="actionDone"
+                                android:inputType="textVisiblePassword" />
+
+                            <Button
+                                android:id="@+id/btnSave"
+                                android:layout_width="80dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="10dp"
+                                android:background="@drawable/img_background_menu_main"
+                                android:text="Save"
+                                android:textAllCaps="true"
+                                android:textColor="@color/colorWhite" />
+
+                        </RelativeLayout>
+            -->
+
+            <Button
+                android:id="@+id/btnCheckOut"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="60dp"
+                android:background="@color/colorPurpleGiven"
+                android:text="Check Out"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="10pt" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpandAbleActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/relativeLayoutAll"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp">
+
+                    <ImageView
+                        android:id="@+id/imgCompanies"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/company_noodles" />
+
+                    <TextView
+                        android:id="@+id/customTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/myriad_set_pro_semibold"
+                        android:text="The Noodles"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10pt" />
+
+                    <TextView
+                        android:id="@+id/customDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/myriad"
+                        android:text="Min Delivery:$25/ "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="6pt" />
+
+                    <TextView
+                        android:id="@+id/customStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="35dp"
+                        android:layout_toEndOf="@id/customDescription"
+                        android:fontFamily="@font/myriad"
+                        android:text="Open"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="6pt" />
+
+                    <RatingBar
+                        android:id="@+id/customRatingBar"
+                        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="15dp"
+                        android:isIndicator="false"
+                        android:numStars="5"
+                        android:stepSize="1" />
+
+                </RelativeLayout>
+
+                <ExpandableListView
+                    android:id="@+id/lvExpand"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:childDivider="@null"
+                    android:groupIndicator="@null"
+                    android:transcriptMode="disabled"
+                    android:dividerHeight="-1dp"></ExpandableListView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutAll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:alpha="0.8"
+        android:background="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="10dp">
+        <!--android:background="#1c2833"   that was color of relativeLayoutAll by mujahid-->
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/varela_round_regular"
+            android:text="Your Order:"
+            android:textColor="@color/colorWhite"
+            android:textSize="12pt" />
+
+        <TextView
+            android:id="@+id/ordertxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/t1"
+            android:fontFamily="@font/varela_round_regular"
+            android:text="0 $"
+            android:textColor="@color/colorWhite"
+            android:textSize="10pt" />
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="85dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/myriad"
+            android:gravity="center"
+            android:text="Order"
+            android:textAllCaps="false"
+            android:textColor="#9E4ABD"
+            android:textSize="10pt" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

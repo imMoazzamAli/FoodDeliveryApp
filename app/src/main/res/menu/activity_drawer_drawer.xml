@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_basket"
+            android:icon="@drawable/icon_basket"
+            android:title="Basket"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/nav_track_order"
+            android:icon="@drawable/icon_tracker"
+            android:title="Track Your Order"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/nav_favourite"
+            android:icon="@drawable/icon_favourite"
+
+            android:title="Favourite"
+            android:visible="false" />
+        <item
+            android:id="@+id/nav_order_history"
+            android:icon="@drawable/icon_order_history"
+
+            android:title="Order History"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/nav_refresh_search"
+            android:icon="@drawable/icon_refresh_search"
+
+            android:title="Start Fresh Search"
+            android:visible="false" />
+
+        <item
+            android:icon="@drawable/icon_need_help"
+            android:title="Need Help?">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_contact_us"
+                    android:icon="@drawable/icon_contact_us"
+                    android:title="Contact us"
+                    android:visible="false" />
+
+                <item
+                    android:id="@+id/nav_tell_us_what_you_think"
+                    android:icon="@drawable/icon_tellus_what_you_think"
+
+                    android:title="Tell Us What You Think"
+                    android:visible="false" />
+
+                <item
+                    android:id="@+id/nav_about_us"
+                    android:icon="@drawable/icon_about_us"
+                    android:title="About Us!"
+                    android:visible="false" />
+
+            </menu>
+        </item>
+
+
+    </group>
+
+    <!--
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+-->
+
+
+</menu>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "917756485840",
+    "firebase_url": "https://foodfeed-f987a.firebaseio.com",
+    "project_id": "foodfeed-f987a",
+    "storage_bucket": "foodfeed-f987a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:917756485840:android:fee01b75ce29b3ee",
+        "android_client_info": {
+          "package_name": "com.example.user.practicalwork2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "917756485840-3fsfis6dbr5b9km904aunvmhprupm39u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.practicalwork2",
+            "certificate_hash": "56dfb9e2a98212453fd2dd9d1a77c69398872b65"
+          }
+        },
+        {
+          "client_id": "917756485840-t37ootvu4pio84h6hp8boqfi0cj6u0tc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNfAiIV5KXHEdPpvLHo5Oh1O7yBCKbVwM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "917756485840-t37ootvu4pio84h6hp8boqfi0cj6u0tc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

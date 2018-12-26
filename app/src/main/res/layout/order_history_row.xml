@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/txtHistoryName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/myriad_set_pro_semibold"
+        android:text="The Noodle"
+        android:textColor="@color/colorBlack"
+        android:textSize="11pt"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/txtHistoryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHistoryName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/myriad"
+        android:text="05-oct-2018"
+        android:textColor="#a8a8a8"
+        android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/txtHistoryTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHistoryName"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/txtHistoryDate"
+        android:fontFamily="@font/myriad"
+        android:text="11:47 AM"
+        android:textColor="#a8a8a8"
+        android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/tv11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHistoryDate"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/myriad"
+        android:text="Total Amount: "
+        android:textColor="#a8a8a8"
+        android:textSize="8pt" />
+
+    <TextView
+        android:id="@+id/txtHistoryTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtHistoryTime"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@id/tv11"
+        android:fontFamily="@font/myriad"
+        android:text="1000 $"
+        android:textColor="#a8a8a8"
+        android:textSize="8pt" />
+
+    <ImageView
+        android:id="@+id/imgHistoryCompany"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/company_noodles" />
+
+
+</RelativeLayout>

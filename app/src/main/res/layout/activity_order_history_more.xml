@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderHistoryMoreActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/imgHistoryMore"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/company_noodles" />
+
+            <TextView
+                android:id="@+id/txtHistoryMoreTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgHistoryMore"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/myriad_set_pro_semibold"
+                android:text="The Noodles"
+                android:textColor="@color/colorBlack"
+                android:textSize="10pt"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtConfirmDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHistoryMoreTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/myriad_set_pro_semibold"
+                android:text="Your order was"
+                android:textColor="@color/colorSilver"
+                android:textSize="10pt" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/txtConfirmDescription"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorDefault" />
+
+            <RelativeLayout
+                android:id="@+id/rl4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/zQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Quantity"
+                    android:textColor="@color/colorSilver"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/zName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/zQuantity"
+                    android:text="Name of Dish"
+                    android:textColor="@color/colorSilver"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="0dp"
+                    android:text="Price"
+                    android:textColor="@color/colorSilver"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lvHistoryMore"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@id/rl4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="0dp"
+                android:contextClickable="false"
+                android:dividerHeight="-1dp"></ListView>
+
+            <RelativeLayout
+                android:id="@+id/rlayout"
+                android:layout_width="220dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/lvHistoryMore"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/round_final_order_total_amount"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="Total: "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:id="@+id/txtHistoryMoreOrderPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_toEndOf="@id/tv1"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="$43"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10pt" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtHistoryMoreStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/varela_round_regular"
+                android:text="Cash Payment"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlack"
+                android:textSize="10pt" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

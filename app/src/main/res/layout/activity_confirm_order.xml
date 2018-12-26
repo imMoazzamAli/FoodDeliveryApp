@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background_menu_main"
+    tools:context=".ConfirmOrderActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarConfirmActivity"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/colorPurpleGiven"
+            android:theme="@style/ToolbarTheme">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/imgCartConfirmActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_shopping_cart_black_24dp" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbarConfirmActivity"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/imgConfirmCompanies"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/company_noodles" />
+
+                <TextView
+                    android:id="@+id/txtConfirmTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="55dp"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="The Noodles"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="10pt" />
+
+                <TextView
+                    android:id="@+id/txtConfirmDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="Your order is below"
+                    android:textColor="@color/colorSilver"
+                    android:textSize="10pt" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="110dp"
+                    android:background="@color/colorSilver" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="115dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/zQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:fontFamily="@font/myriad_set_pro_semibold"
+                        android:text="Quantity"
+                        android:textColor="@color/colorSilver"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/zName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_toEndOf="@+id/zQuantity"
+                        android:fontFamily="@font/myriad_set_pro_semibold"
+                        android:text="Name of Dish"
+                        android:textColor="@color/colorSilver"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="25dp"
+                        android:layout_marginStart="0dp"
+                        android:fontFamily="@font/myriad_set_pro_semibold"
+                        android:text="Price"
+                        android:textColor="@color/colorSilver"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+                <ListView
+                    android:id="@+id/listFinalOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_marginTop="130dp"
+                    android:contextClickable="false"
+                    android:dividerHeight="-1dp"></ListView>
+
+                <RelativeLayout
+                    android:id="@+id/rlayout"
+                    android:layout_width="220dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/listFinalOrder"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_final_order_total_amount"
+
+                    android:gravity="center_horizontal">
+
+                    <TextView
+                        android:id="@+id/tview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/myriad_set_pro_semibold"
+                        android:text="Total: "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10pt" />
+
+                    <TextView
+                        android:id="@+id/txtShowOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/tview"
+                        android:fontFamily="@font/myriad_set_pro_semibold"
+                        android:text="$ 43"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="10pt" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/myriad_set_pro_semibold"
+                    android:text="Pay via"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btnOrderCreditCard"
+                    android:layout_width="220dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/tvPay"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btncolor_signin_signup"
+                    android:gravity="center"
+                    android:text="Credit Card"
+                    android:textAllCaps="false"
+                    android:textColor="#FFF"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btnOrderPayPal"
+                    android:layout_width="220dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/btnOrderCreditCard"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/btncolor_signin_facebook"
+                    android:gravity="center"
+                    android:text="PayPal"
+                    android:textAllCaps="false"
+                    android:textColor="#FFF"
+                    android:textStyle="normal" />
+
+                <Button
+                    android:id="@+id/btnOrderCash"
+                    android:layout_width="220dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@+id/btnOrderPayPal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_button_black"
+                    android:gravity="center"
+                    android:text="Cash on Delivery"
+                    android:textAllCaps="false"
+                    android:textColor="#FFF"
+                    android:textStyle="normal" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

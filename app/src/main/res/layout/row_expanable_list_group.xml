@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutStarter"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorSilver"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvGroupHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/varela_round_regular"
+            android:text="Starter"
+            android:textColor="@color/colorBlack"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/tvGroupHeaderSign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="210dp"
+            android:fontFamily="@font/myriad"
+            android:text="+"
+            android:textColor="@color/colorBlack"
+            android:textSize="12pt"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</LinearLayout>

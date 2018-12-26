@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ChatActivity">
+
+    <ListView
+        android:id="@+id/lvChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="-1dp"
+        android:transcriptMode="alwaysScroll"></ListView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etChatMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ems="30"
+            android:hint="Type some thing here"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="300"
+            android:maxLines="1"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_menu_send"
+            android:gravity="center"
+            android:text="" />
+
+    </LinearLayout>
+
+</LinearLayout>

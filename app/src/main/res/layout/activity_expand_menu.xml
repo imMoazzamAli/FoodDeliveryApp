@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_background_menu_main"
+    tools:context=".ExpandMenuActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayoutAll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/relativeLayoutAll"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarExpandMenu"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/colorPurpleGiven"
+            android:theme="@style/ToolbarTheme">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/imgCartExpandMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_shopping_cart_black_24dp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/toolbarExpandMenu"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="40dp">
+
+                        <ImageView
+                            android:id="@+id/imgCompanies"
+                            android:layout_width="80dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/company_noodles" />
+
+                        <TextView
+                            android:id="@+id/customTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/myriad_set_pro_semibold"
+                            android:text="The Noodles"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="10pt" />
+
+                        <TextView
+                            android:id="@+id/customDescription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="35dp"
+                            android:fontFamily="@font/myriad"
+                            android:text="Min Delivery:$25/ "
+                            android:textColor="@color/colorBlack"
+                            android:textSize="6pt" />
+
+                        <TextView
+                            android:id="@+id/customStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="35dp"
+                            android:layout_toEndOf="@id/customDescription"
+                            android:fontFamily="@font/myriad"
+                            android:text="Open"
+                            android:textColor="@color/colorPurple"
+                            android:textSize="6pt" />
+
+                        <RatingBar
+                            android:id="@+id/customRatingBar"
+                            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="15dp"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:stepSize="1" />
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycleViewMy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"></android.support.v7.widget.RecyclerView>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutStarter"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/img_background_menu_main"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txtStarter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/varela_round_regular"
+                            android:text="Starter"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="10pt" />
+
+                        <TextView
+                            android:id="@+id/plusStarterNoodle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="210dp"
+                            android:fontFamily="@font/myriad"
+                            android:text="+"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="10pt"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <ListView
+                        android:id="@+id/lvStarter"
+                        android:layout_width="match_parent"
+                        android:layout_height="165dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="0dp"
+                        android:dividerHeight="-1dp"
+                        android:visibility="gone"></ListView>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutDrinks"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/img_background_menu_main"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/varela_round_regular"
+                            android:text="Drinks"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="10pt" />
+
+                        <TextView
+                            android:id="@+id/plusDrinksNoodle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="210dp"
+                            android:fontFamily="@font/myriad"
+                            android:text="+"
+
+                            android:textColor="@color/colorBlack"
+                            android:textSize="10pt"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <ListView
+                        android:id="@+id/lvDrinks"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="0dp"
+                        android:dividerHeight="-1dp"
+
+                        android:visibility="gone"></ListView>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayoutDesserts"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/img_background_menu_main"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="5dp"
+                            android:text="Desserts"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="10pt" />
+
+                        <TextView
+                            android:id="@+id/plusDesserts"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginLeft="210dp"
+                            android:fontFamily="@font/myriad"
+                            android:text="+"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="10pt"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <ListView
+                        android:id="@+id/lvDesserts"
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="0dp"
+                        android:dividerHeight="-1dp"
+                        android:visibility="gone"></ListView>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutAll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:alpha="0.8"
+        android:background="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="10dp">
+        <!--android:background="#1c2833"   that was color of relativeLayoutAll by mujahid-->
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/varela_round_regular"
+            android:text="Your Order:"
+            android:textColor="@color/colorWhite"
+            android:textSize="12pt" />
+
+        <TextView
+            android:id="@+id/ordertxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/t1"
+            android:fontFamily="@font/varela_round_regular"
+            android:text="0 $"
+            android:textColor="@color/colorWhite"
+            android:textSize="10pt" />
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="85dp"
+            android:layout_height="43dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/myriad"
+            android:gravity="center"
+            android:text="Order"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPurple"
+            android:textSize="9pt" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
